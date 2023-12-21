@@ -1,0 +1,32 @@
+.link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;   
+    height: 0; 
+    font-weight: 600;
+    font-size: 16px;
+    font-style: normal;
+    color: @black;
+    transition: color 0.2s;
+    &:hover{
+        @media(hover: hover){
+            color: @red; 
+        }
+    }
+    &:active{
+        color: @red;
+    }
+
+    &__vertical {
+        flex-direction: column;
+        height: 132px;
+        width: 128px;
+        
+    }
+
+    &__name,
+    &__icon{
+        cursor: pointer;
+    }
+}
