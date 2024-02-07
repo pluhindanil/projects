@@ -10,6 +10,26 @@
   color: @black;
   cursor: pointer;
 
+  &--red{
+    color: @red;
+    .check__mark{
+      border-color: @red;
+    }
+    .check__input{
+      &:checked{
+        &~.check__mark{
+          background-color: @red;
+        }
+      }
+    }
+  }
+  &--disabled{
+    pointer-events: none;
+    opacity: 0.5;
+  }
+
+
+
   &__input {
     .is-hidden;
 
@@ -49,6 +69,11 @@
     &--s {
       font-size: 14px;
       line-height: 19px;
+
+      @media @bw600 {
+        font-size: 12px;
+        line-height: 13px;
+    }
     }
   }
 }

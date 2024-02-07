@@ -1,26 +1,50 @@
 .main-header {
-    padding: 100px 0;
+    overflow: hidden;
 
     &__title,
     &__text{
-        padding-left: 40px;
-        padding-right: 40px;
+        //padding-left: 40px;
+        //padding-right: 40px;
         text-align: center;
         text-transform: uppercase;
-        font-family: 'Lora', sans-serif;
+        font-family: @font2;
         font-weight: 400;
         font-size: 45px;
         line-height: normal;
         color: #1F1E1E;
+
+        @media @bw1660 {
+            font-size: 35px;
+        }
+
+        @media @bw1020 {
+            font-size: 30px;
+        }
+
+        @media @bw768 {
+            font-size: 22px;
+        }
+
+        @media @bw500 {
+            font-size: 13px;
+        }
     }
 
     &__title{
         margin: 0 0 70px;
+
+        @media @bw1020 {
+            margin-bottom: 51px;
+        }
+
+        @media @bw500 {
+            margin-bottom: 29px;
+        }
     }
 
     &__text{
         margin: 0 auto;
-        max-width: 948px;
+        max-width: 990px;
         width: 100%;
     }
 
@@ -29,6 +53,26 @@
         margin-bottom: 70px;
         position: relative;
         width: 100%;
+
+        @media @bw1660 {
+            width: 113.304243%;
+            margin-left: -6.65223%;
+        }
+
+        @media @bw1020 {
+            margin-bottom: 50px;
+            margin-left: -13.41145%;
+            width: 126.923077%;
+        }
+
+        @media @bw650 {
+            margin-left: -18.40937%;
+            width: 136.615391%;
+        }
+
+        @media @bw500 {
+            margin-bottom: 30px;
+        }
     }
 
     &__picture::before {

@@ -2,11 +2,22 @@
   position: relative;
   box-sizing: border-box;
   display: flex;
+  
   width: 100%;
+
+  @media @bw1020 {
+    flex-direction: column;
+  }
+
+
   &:hover {
-    .article-card__picture {
-      box-shadow: 0 0 30px fade(@black, 55%);
-    }
+    @media(hover:hover) {
+      .article-card__picture {
+          box-shadow: 0 0 30px fade(@black, 55%);
+      }
+  }
+
+
   }
   &__link {
     flex-shrink: 0;
@@ -16,6 +27,12 @@
     margin-right: 60px;
     font-size: 0;
     text-decoration: none;
+
+    @media @bw1020 {
+      width: 100%;
+      margin-right: 0px;
+  }
+
     &:hover {
       & ~ .article-card__info {
         .article-card__title-link {
@@ -24,6 +41,7 @@
         }
       }
   }
+  
 }
   &__picture {
     display: block;
@@ -31,6 +49,7 @@
     width: 100%;
     transition: box-shadow 0.2s;
     overflow: hidden;
+
     &::after {
       content: "";
       display: block;
@@ -38,6 +57,7 @@
       padding-top: 62.3126%;
     }
   }
+
   &__img {
     display: block;
     position: absolute;
@@ -58,22 +78,52 @@
       padding-bottom: 30px;
       padding: 30px 0;
       padding-right: 150px;
-    }
+
+      @media @bw1020 {
+          padding: 20px 170px 20px 0;
+      }
+
+      @media @bw600 {
+          padding: 10px 0;
+          padding-bottom: 60px;
+      }
+  }
+
   &__time {
+    margin: 0 0 40px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+
+    @media @bw600 {
+        margin-bottom: 20px;
+        font-size: 14px;
+        line-height: normal;
+    }
+  }
+
+  &__title-link,
+  &__description {
       margin: 0 0 40px;
       font-weight: 300;
       font-size: 16px;
       line-height: 22px;
   }
-  &__title-link,
-  &__description {
-      max-width: 470px;
-  }
+
   &__title-link {
       margin: auto 0 40px;
       color: @black;
       text-decoration-color: transparent;
       transition: color 0.2s, text-decoration-color 0.2s;
+
+      @media @bw1020 {
+        margin-bottom: 20px;
+    }
+
+    @media @bw600 {
+        margin-bottom: 10px;
+    }
+
       &:hover {
         color: @red;
         text-decoration-color: @red;
@@ -86,12 +136,26 @@
       font-weight: 600;
       font-size: 24px;
       line-height: 33px;
+
+     @media @bw1020 {
+          font-size: 20px;
+      }
+
+      @media @bw600 {
+          font-size: 16px;
+          line-height: normal;
+          font-weight: 700;
+      }
     }
 
   &__description {
       margin: 0;
       font-size: 16px;
       line-height: 22px;
+
+      @media @bw600 {
+        font-size: 14px;
+    }
   }
     
   &__arrow {
@@ -100,24 +164,11 @@
       bottom: 30px;
       color: inherit;
       transition: none;
+      @media @bw1020{
+        bottom: 0px;
+      }
   }
 
-  & + .article-card {
-      margin-top: 120px;
-      &::before {
-        content: "";
-        display: block;
-        position: absolute;
-        margin: 0 auto 60px;
-        bottom: 100%;
-        left: 0;
-        right: 0;
-        width: 100%;
-        max-width: 1254px;
-        height: 1px;
-        background-color: @black;
-        pointer-events: none;
-      }
-    }
+  
 
 }
