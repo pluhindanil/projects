@@ -72,15 +72,13 @@
           </div>
           <!-- Кнопка "Показать все" -->
 
-          <a href="#" 
-                class="events__link link link__vertical">
-                <span class="link__name">
-                  Показать еще
-                </span>
-                
-                <svg class="link__icon" width="62" height="92">
-                    <use xlink:href="assets/icons/symbols.svg#vertical_link"></use>
-                </svg>
+          <a href="#" class="events__link link link--vertical">
+            <span class="link__name">Показать еще</span>
+            <div class="link__arrow arrow arrow--vertical">
+              <svg class="arrow__icon" width="91" height="60">
+                <use xlink:href="assets/icons/symbols.svg#link"></use>
+              </svg>
+            </div>
           </a>
         </section>
         
@@ -207,60 +205,53 @@
 
         @@include('blocks/offers.html', {"class": "events__offers"})
 
-        <section class="contacts-events events__contacts-events">
-          <div class="contacts-events__container">
-            <div class="contacts-events__items">
-
-              <div class="contacts-events__item contacts-events-item">
-                <div class="contacts-events-item__img">
-                  <svg class="contacts-events-item__icon" width="24" height="24">
-                    <use xlink:href="assets/icons/symbols.svg#information"></use>
+        <section class="organisation events__organisation">
+          <div class="organisation__container">
+            <div class="organisation__items">
+              <div class="organisation__item organisation-item">
+                <div class="organisation-item__img">
+                  <svg class="organisation-item__icon" width="24" height="24">
+                    <use
+                      xlink:href="assets/icons/symbols.svg#information"
+                    ></use>
                   </svg>
                 </div>
-                <div class="contacts-events-item__content">
-                  <h4 class="contacts-events-item__title">Цены</h4>
-                  <p
-                    class="contacts-events-item__info"
-                  >
+                <div class="organisation-item__content">
+                  <h4 class="organisation-item__title">Цены</h4>
+                  <p class="organisation-item__info">
                     Цены, указанные на сайте носят информационный характер. Мы
                     придерживаемся индивидуального подхода в работе с клиентом.
                   </p>
                 </div>
               </div>
-              <div class="contacts-events__item contacts-events-item">
-                <div class="contacts-events-item__img">
-                  <svg class="contacts-events-item__icon" width="24" height="24">
+              <div class="organisation__item organisation-item">
+                <div class="organisation-item__img">
+                  <svg class="organisation-item__icon" width="24" height="24">
                     <use xlink:href="assets/icons/symbols.svg#contact"></use>
                   </svg>
                 </div>
-                <div class="contacts-events-item__content">
-                  <h4 class="contacts-events-item__title">Контакты</h4>
-                  <p class="contacts-events-item__info">
+                <div class="organisation-item__content">
+                  <h4 class="organisation-item__title">Отдел аренды</h4>
+                  <p class="organisation-item__info">
                     Отдел организации мероприятий
                   </p>
-                  <a
-                    href="tel:+74993500730"
-                    class="contacts-events-item__info"
+                  <a href="tel:+74993500730" class="organisation-item__info"
                     >+7 499 350 0730</a
                   >
-                  <a
-                    href="mailto:hi@tagree.ru"
-                    class="contacts-events-item__info"
+                  <a href="mailto:hi@tagree.ru" class="organisation-item__info"
                     >hi@tagree.ru</a
                   >
                 </div>
               </div>
-              <div class="contacts-events__item contacts-events-item">
-                <div class="contacts-events-item__img">
-                  <svg class="contacts-events-item__icon" width="24" height="24">
+              <div class="organisation__item organisation-item">
+                <div class="organisation-item__img">
+                  <svg class="organisation-item__icon" width="24" height="24">
                     <use xlink:href="assets/icons/symbols.svg#handshake"></use>
                   </svg>
                 </div>
-                <div class="contacts-events-item__content">
-                  <h4 class="contacts-events-item__title">Преимущество</h4>
-                  <p
-                    class="contacts-events-item__info"
-                  >
+                <div class="organisation-item__content">
+                  <h4 class="organisation-item__title">Отдел мероприятий</h4>
+                  <p class="organisation-item__info">
                     Мы имеем все возможности для того, чтобы помочь как малому
                     бизнесу и молодым талантам, так и большим корпорациям и
                     холдингам.

@@ -2,6 +2,7 @@
     &__container {
         .container();
     }
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
@@ -11,11 +12,21 @@
             align-items: center;
         }
     }
+
+    &__title {
+        @media @bw1340 {
+            margin-bottom: 125px;
+        }
+    }
+
     &__items {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 15px 0;
+
+        
+
         &--fdrow {
             flex-direction: row;
         }
@@ -31,6 +42,7 @@
             flex-direction: column;
         }
     }
+
     &__picture {
         position: relative;
         display: block;
@@ -51,6 +63,7 @@
             padding-top: 65.558%;
         }
     }
+
     &__img {
         position: absolute;
         left: 0;

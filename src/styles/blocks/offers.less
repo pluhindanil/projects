@@ -1,10 +1,10 @@
-.offers{
+.offers {
     &__container {
         .container();
     }
 
-    &__text{
-        margin: 0 auto 43px;
+    &__i-want {
+        margin: 0 auto 45px;
         color: @black;
         text-align: center;
         font-family: @font2;
@@ -14,72 +14,52 @@
         line-height: 30px;
         letter-spacing: 0.44px;
         text-transform: uppercase;
-
-        @media @bw960{
+        @media @bw1020 {
             font-size: 16px;
-            font-weight: 500;
-            line-height: normal;
         }
-
-        @media @bw400{
+        @media @bw600 {
             margin-bottom: 25px;
+        }
+        @media @bw360 {
             font-size: 13px;
-            font-weight: 400;
-            line-height: 17px; /* 130.769% */
-            letter-spacing: 0.26px;
         }
     }
 
-    &__buttons{
+    &__btns {
         display: flex;
         justify-content: center;
-        //margin: 0 auto;
-        //max-width: 624px;
         width: 100%;
 
-        
-
-        @media @bw600 {
+        @media @bw650 {
             flex-wrap: wrap;
         }
     }
 
-    &__btn{
+    &__btn-1 {
+        margin-right: 106px;
 
-        @media @bw600{
+        @media @bw1020 {
+            margin-right: 56px;
             font-size: 14px;
         }
 
-        &:first-child{
-            margin-right: 106px;
-
-            @media @bw1340{
-                margin-right: 94px;
-            }
-
-            @media @bw960{
-                margin-right: 56px;
-            }
-
-            @media @bw600{
-                margin: 0 0 25px 0;
-                width: 100%;
-
-            }
-        }
-
-        &:last-child {
-            max-width: 246px;
+        @media @bw650 {
+            margin: 0 0 25px 0;
             width: 100%;
-
-            @media @bw600{
-                max-width: none;
-                width: 100%;
-                
-            }
+            min-width: 280px;
         }
     }
 
-    
-
+    &__btn-2 {
+        max-width: 246px;
+        width: 100%;
+        @media @bw1020 {
+            font-size: 14px;
+        }
+        @media @bw650 {
+            width: 100%;
+            max-width: none;
+            min-width: 280px;
+        }
+    }
 }

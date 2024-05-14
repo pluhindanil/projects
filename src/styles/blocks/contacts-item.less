@@ -3,6 +3,10 @@
     align-items: center;
     gap: 54px;
 
+    @media @bw1340{
+        gap: 65px;
+    }
+
     @media @bw1170 {
         flex-direction: column;
         min-width: 194.17px;
@@ -37,7 +41,7 @@
         background-color: @black;
 
         @media @bw650 {
-            min-width: 65px;
+            width: 65px;
             height: 65px;
         }
     }
@@ -62,7 +66,6 @@
     }
     &__info {
         display: block;
-        margin: 0;
         margin: 0 0 5px;
         font-weight: 400;
         font-size: 16px;

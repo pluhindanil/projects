@@ -1,6 +1,7 @@
 .page-footer {
-    box-sizing: border-box;
-    padding: 60px 0 75px;
+    flex: 0 0 auto;
+    margin-top: -35px;
+    padding-bottom: 55px;
 
     @media @bw1340 {
         padding-bottom: 65px;
@@ -10,31 +11,11 @@
         padding-bottom: 50px;
     }
 
-    &__container{
+    &__container {
         .container();
     }
 
-    &__border {
-        display: flex;
-        margin-bottom: 60px;
-        &::before,
-        &::after {
-            content: '';
-            flex-grow: 1;
-            height: 2px;
-            width: 2px;
-        }
-        &::before {
-            margin-right: 50px;
-            background: linear-gradient(270deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 82.86%);
-        }
-        &::after {
-            margin-left: 50px;
-            background: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 100%);
-        }
-    }
-
-    &__wrapper{
+    &__nav-subcribe-container {
         display: flex;
         justify-content: space-between;
         margin-bottom: 100px;
@@ -48,116 +29,78 @@
         }
     }
 
-    &__nav{
-        margin-right: 30px;
+    &__separator {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+        width: 100%;
+        height: 2px;
+
+        &::before,
+        &::after {
+            content: "";
+            display: block;
+            width: 29.3343%;
+            height: 2px;
+        }
+
+        &::before {
+            background: linear-gradient(-90deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 100%);
+            margin-right: 7.3463%;
+        }
+
+        &::after {
+            background: linear-gradient(90deg, #1C1B1B 0%, rgba(255, 255, 255, 0.00) 100%);
+        }
+    }
+
+    &__nav {
         position: relative;
-        padding-left: 26px;
         display: flex;
         flex-direction: column;
-        gap: 22px;
-        &::before{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 4px;
-            height: 100%;
-            background-color: @red;
-        }
 
         @media @bw768 {
             margin-bottom: 60px;
         }
 
-        @media @bw320{
-            gap: 27px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background-color: @red;
         }
     }
 
-    &__nav-link{
-        display: block;
-        text-decoration: none;
-        font-size: 16px;
-        font-weight: 600;
-        color: @black;
-        transition: color 0.2s;
-        &:hover{
-            @media(hover:hover){
-                color: @red;
-            }
-        }
-        &:active{
-            color: @red;
-        }
-    }
-
-    &__bottom{
-        display: flex;
-        justify-content: space-between;
-
-        @media @bw1020 {
-            flex-wrap: wrap;
-        }
-    }
-
-    &__docs{
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 384px;
-
-        @media @bw1020 {
-            max-width: 300px;
-        }
-
-        @media @bw768 {
-            width: 100%;
-            max-width: 768px;
-        }
-    }   
-
-    &__milenials,
-    &__confidence,
-    &__cookies,
-    &__promotion,
-    &__form-subscribe {
+    &__nav-link {
+        position: relative;
+        margin: 0 0 22px 26px;
         color: @black;
         font-family: @font1;
         font-size: 16px;
         font-style: normal;
-        font-weight: 400;
-        line-height: 22px;
+        font-weight: 600;
+        line-height: normal;
+        text-decoration: none;
+        transition: color 0.2s;
 
-        
-    }
-    &__milenials {
-        margin-bottom: 20px;
-        width: 100%;
-
-        @media @bw768 {
-            order: 2;
-            margin-bottom: 6.5px;
-            margin-left: auto;
-            justify-content: end;
-        }
-    }
-
-    &__milenials,
-    &__confidence,
-    &__cookies{
-        display: flex;
-        @media @bw1340 {
+        @media @bw600 {
             font-size: 14px;
-            line-height: 20px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            @media(hover:hover) {
+                color: @red;
+            }
         }
     }
 
-
-    &__form{
-        width: 410px;
-
-        @media @bw1340{
-            width: 388px;
-        }
+    &__subscribe-form {
+        max-width: 410px;
 
         @media @bw768 {
             margin-left: auto;
@@ -165,48 +108,72 @@
         }
 
         @media @bw500{
-            max-width: 388px;
-            width: 100%;
-        }
-
-        @media @bw400{
-            //margin-left: -20px;
-            //margin-right: -20px;
-            //padding: 0;
-            //max-width: none;
-            //width: calc(100%+40px);
+            max-width: 499px;
         }
     }
 
-    &__confidence,
-    &__cookies,
-    &__promotion,
-    &__form-subscribe {
+    &__vault {
+        display: flex;
+        justify-content: space-between;
+        margin-top: -35px;
+
+        @media @bw1020 {
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+    }
+
+    &__policy {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 384px;
+        margin-top: -50px;
+
+        @media @bw1020 {
+            max-width: 300px;
+        }
+
+        @media @bw768 {
+            //margin-bottom: 15px;
+            width: 100%;
+            max-width: none;
+        }
+    }
+
+    &__millennials,
+    &__confident,
+    &__cookies {
+        color: @black;
+        font-family: @font1;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+
+        @media @bw1340 {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    &__millennials {
+        margin-top: 35px;
+        margin-bottom: 20px;
+        width: 100%;
+
+        @media @bw768 {
+            order: 2;
+            margin-bottom: 6.5px;
+            justify-content: flex-end;
+        }
+    }
+
+    &__confident,
+    &__cookies {
         font-weight: 600;
     }
 
-    &__form-subscribe{
-        display: block;
-        width: 100%;
-        padding-left: 6px;
-        @media @bw768{
-            padding-left: 0;
-            text-align: center;
-        }
-
-        @media @bw500{
-            font-size: 13px;
-            padding-left: 0;
-            text-align: start;
-            font-style: normal;
-            font-weight: 400;   
-            line-height: normal;
-            margin-right: 0;
-            padding-right: 0;
-        }
-    }
-
-    &__confidence {
+    &__confident {
         margin-right: 60px;
 
         @media @bw1020 {
@@ -227,8 +194,6 @@
 
     &__social {
         display: flex;
-        flex-direction: row;
-        //gap: 44px;
 
         @media @bw1020 {
             order: -1;
@@ -237,32 +202,21 @@
         }
     }
 
-    &__link {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: background-color 0.2s;
-        margin: 0 22px 0 auto;
+    &__inst-link {
+        display: block;
         width: 58px;
         height: 58px;
-        border-radius: 50%;
-        background-color: @black;
+        margin: 0 22px 0 auto;
+        transition: color 0.2s;
+
         &:last-child {
             margin: 0 auto 0 22px;
         }
+
         &:hover {
-            background-color: @red_dark;
-        }
-        &::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 24px; 
-            height: 24px; 
-            background-color: transparent; 
+            @media(hover:hover) {
+                color: @red_dark;
+            }
         }
     }
 
@@ -278,14 +232,13 @@
         }
     }
 
-    &__promotion{
-        @media @bw1020 {
+    &__tagree-label {
+        @media @bw768 {
             font-size: 14px;
         }
     }
 
     &__tagree-icon {
-        padding-top: 4px;
         align-self: center;
         margin-left: 15px;
     }

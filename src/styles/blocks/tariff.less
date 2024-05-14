@@ -3,7 +3,6 @@
         .container();
     }
     &__description {
-        //margin: 0 0 60px 30px;
         margin: 0 0 60px;
         width: 100%;
         max-width: 868px;
@@ -17,5 +16,17 @@
 
     &__tariff-table {
         width: 100%;
+    }
+
+    &__title {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.44px;
+
+        @media @bw600 {
+            font-size: 14px;
+            font-weight: 400 ;
+        }
     }
 }

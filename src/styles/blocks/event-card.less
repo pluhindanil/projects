@@ -13,9 +13,11 @@
         text-decoration: none;
     }
 
-    &__link:hover .event-card__title {
-        color: #BC3324;
-        text-decoration-color: #BC3324;
+    &__link:hover &__title {
+        @media(hover:hover) {
+            color: @red_dark;
+            text-decoration-color: @red_dark;
+        }
     }
 
     &__picture {
@@ -26,13 +28,17 @@
         font-size: 0;
         text-decoration: none;
         overflow: hidden;
-    }
 
-    &__picture::after {
-        content: "";
-        display: block;
-        width: 100%;
-        padding-top: 107.16%;
+        
+
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            padding-top: 107.16%;
+        }
+
+       
     }
 
     &__img {
@@ -43,6 +49,10 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+
+        // @media @bw360{
+        //     width: 280px;
+        // }
     }
 
 
