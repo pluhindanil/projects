@@ -1,7 +1,9 @@
 .page-footer {
     flex: 0 0 auto;
-    margin-top: -35px;
+    margin-top: 87px;
     padding-bottom: 55px;
+
+    //margin-top: 0px;
 
     @media @bw1340 {
         padding-bottom: 65px;
@@ -9,6 +11,10 @@
 
     @media @bw768 {
         padding-bottom: 50px;
+    }
+
+    @media @bw400{
+        margin-top:8px;
     }
 
     &__container {
@@ -138,6 +144,10 @@
             width: 100%;
             max-width: none;
         }
+
+        @media @bw400{
+            margin-top: -48 px;
+        }
     }
 
     &__millennials,
@@ -171,6 +181,8 @@
     &__confident,
     &__cookies {
         font-weight: 600;
+
+        
     }
 
     &__confident {
@@ -182,6 +194,10 @@
 
         @media @bw768 {
             margin: 0 20px 20px 0;
+        }
+
+        @media @bw400{
+            margin: 33px 20px 20px 0;
         }
     }
 
@@ -199,6 +215,10 @@
             order: -1;
             margin-bottom: 60px;
             width: 100%;
+        }
+
+        @media @bw400{
+            //margin-bottom: 20px;
         }
     }
 
@@ -242,4 +262,5 @@
         align-self: center;
         margin-left: 15px;
     }
+
 }
